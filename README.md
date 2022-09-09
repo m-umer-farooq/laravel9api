@@ -19,3 +19,24 @@
 
 <p>You may install Laravel Sanctum via the Composer package manager:</p>
 <code>composer require laravel/sanctum</code>
+
+<p>
+    Next, you should publish the Sanctum configuration and migration files using the vendor:publish Artisan command. The sanctum configuration file will be placed in your application's config directory:
+</p>
+<code>php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"</code>
+
+<p>Finally, you should run your database migrations. Sanctum will create one database table in which to store API tokens:</p>
+
+<code>php artisan migrate</code>
+
+<p>
+Next, if you plan to utilize Sanctum to authenticate a SPA, you should add Sanctum's middleware to your api middleware group within your application's app/Http/Kernel.php file:
+</p>
+
+<code>
+'api' => [
+    \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
+    'throttle:api',
+    \Illuminate\Routing\Middleware\SubstituteBindings::class,
+],
+</code>
