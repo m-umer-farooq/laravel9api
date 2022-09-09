@@ -33,10 +33,10 @@
 Next, if you plan to utilize Sanctum to authenticate a SPA, you should add Sanctum's middleware to your api middleware group within your application's app/Http/Kernel.php file:
 </p>
 
-<code>
+<p>
 'api' => [
     \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
     'throttle:api',
     \Illuminate\Routing\Middleware\SubstituteBindings::class,
 ],
-</code>
+</p>
