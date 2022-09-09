@@ -13,5 +13,9 @@
 </p>
 
 
-<h6></h6>
+<h6>Laravel Sanctum</h6>
 <a href="https://laravel.com/docs/9.x/sanctum" target="_blank">https://laravel.com/docs/9.x/sanctum</a>
+
+
+<p>You may install Laravel Sanctum via the Composer package manager:</p>
+<code>composer require laravel/sanctum</code>
