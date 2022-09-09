@@ -2,7 +2,6 @@
 
 <h4>Setting up local project after cloning it to local machien</h4>
 
-
 <p>
     <ul>
         <li>setup .env file and set database connection</li>
@@ -11,5 +10,8 @@
         <li>php artisan migrate</li>
         <li>php artisan serve</li>
     </ul>
-
 </p>
+
+
+<h6></h6>
+<a href="https://laravel.com/docs/9.x/sanctum" target="_blank">https://laravel.com/docs/9.x/sanctum</a>
